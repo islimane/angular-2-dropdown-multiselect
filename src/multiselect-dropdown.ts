@@ -41,8 +41,8 @@ export interface IMultiSelectTexts {
 	name: 'searchFilter'
 })
 class SearchFilter {
-	transform(options: Array<IMultiSelectOption>, args: Array<string>): Array<IMultiSelectOption> {
-		return options.filter((option: IMultiSelectOption) => option.name.toLowerCase().indexOf(args[0].toLowerCase()) > -1);
+	transform(options: Array<IMultiSelectOption>, args: string): Array<IMultiSelectOption> {
+		return options.filter((option: IMultiSelectOption) => option.name.toLowerCase().indexOf(args.toLowerCase()) > -1);
 	}
 }
 
